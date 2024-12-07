@@ -17,6 +17,9 @@ def dashboard(request):
     sources = Insight.objects.values_list('source', flat=True).distinct()
     countries = Insight.objects.values_list('country', flat=True).distinct()
 
+    # Retrieve all data from Insight model (excluding filters)
+    insights = Insight.objects.all()
+
     # Pass them to the template
     context = {
         'end_years': end_years,
@@ -26,8 +29,8 @@ def dashboard(request):
         'pestles': pestles,
         'sources': sources,
         'countries': countries,
+        'insights': insights,  # Add all insights data
     }
-    # print(context)
     return render(request, 'dashboard.html', context)
 
 from django.shortcuts import render
@@ -67,20 +70,3 @@ def filter_dashboard(request):
     # Return the data as a JSON response for easier access on the frontend
     return JsonResponse({'data': serialized_data})
 
-
-
-
-
-
-
-# Filters in the dashboard
-# ● Add end year filter in the dashboard
-# ● Add topics filters in the dashboard
-# ● Add sector filter in the dashboard
-# ● Add region filter in the dashboard
-# ● Add PEST filter in the dashboard
-# ● Add Source filter in the dashboard
-# ● Add SWOT filter in the dashboard
-# ● Country
-# ● City
-# ● Any other control or filters that you can add from the data, best of your knowledge 
