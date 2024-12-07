@@ -8,6 +8,101 @@
             {% include "layout/header.html" %}
             <div class="container my-3">
                 <div class="row g-3">
+
+                    
+                    <!-- Form for applying Filters -->
+<div class="container mt-4">
+    <form id="filterForm" method="GET" action="{% url 'filter_dashboard' %}" class="bg-white p-4 rounded shadow-lg border">
+        <h3 class="mb-4 text-center text-primary">Apply Filters</h3>
+
+        <div class="row g-3">
+            <!-- End Year -->
+            <div class="col-md-4 mb-3">
+                <label for="end_year" class="form-label">End Year:</label>
+                <select name="end_year" id="end_year" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select End Year --</option>
+                    {% for year in end_years %}
+                        <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Topics -->
+            <div class="col-md-4 mb-3">
+                <label for="topics" class="form-label">Topics:</label>
+                <select name="topics" id="topics" class="form-select shadow-sm border-0 rounded-pill" multiple>
+                    {% for topic in topics %}
+                        <option value="{{ topic }}">{{ topic }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Sector -->
+            <div class="col-md-4 mb-3">
+                <label for="sector" class="form-label">Sector:</label>
+                <select name="sector" id="sector" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select Sector --</option>
+                    {% for sector in sectors %}
+                        <option value="{{ sector }}">{{ sector }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <!-- Region -->
+            <div class="col-md-4 mb-3">
+                <label for="region" class="form-label">Region:</label>
+                <select name="region" id="region" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select Region --</option>
+                    {% for region in regions %}
+                        <option value="{{ region }}">{{ region }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Pestle -->
+            <div class="col-md-4 mb-3">
+                <label for="pestle" class="form-label">Pestle:</label>
+                <select name="pestle" id="pestle" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select Pestle --</option>
+                    {% for pestle in pestles %}
+                        <option value="{{ pestle }}">{{ pestle }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Source -->
+            <div class="col-md-4 mb-3">
+                <label for="source" class="form-label">Source:</label>
+                <select name="source" id="source" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select Source --</option>
+                    {% for source in sources %}
+                        <option value="{{ source }}">{{ source }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <!-- Country -->
+            <div class="col-md-4 mb-3">
+                <label for="country" class="form-label">Country:</label>
+                <select name="country" id="country" class="form-select shadow-sm border-0 rounded-pill">
+                    <option value="">-- Select Country --</option>
+                    {% for country in countries %}
+                        <option value="{{ country }}">{{ country }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-lg btn-success shadow-sm border-0 rounded-pill">Apply Filters</button>
+        </div>
+    </form>
+</div>
+
                     
                     <div class="col-12 col-lg-6">
                         <div class="card">
@@ -111,3 +206,4 @@
 {% block scripts %}
 <script src="{% static "assets/js/index.js" %}"></script>
 {% endblock scripts %}
+
