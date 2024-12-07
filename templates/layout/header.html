@@ -1,17 +1,27 @@
 <header class="p-3 text-bg-dark sticky-sm-top">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-end">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Hamburger Button (Visible Only on Small Screens) -->
+            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                <span class="navbar-toggler-icon mb-4">
+                    <img src="https://img.icons8.com/?size=256w&id=17144&format=png&color=FFFFFF" alt="icon" style="height: 30px; width: 30px; object-fix: contain;">
+                </span>
+            </button>
+
+            <!-- Logo -->
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
             </a>
 
+            <!-- Search Form -->
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
             </form>
 
+            <!-- Login and Sign-up Buttons -->
             <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <button type="button" class="btn btn-warning">Sign-up</button>
             </div>
         </div>
     </div>

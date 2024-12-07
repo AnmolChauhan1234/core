@@ -6,71 +6,105 @@
             {% include "layout/sidebar.html" %}
         <div class="w-100">
             {% include "layout/header.html" %}
-            <div class="my-3 mx-3 d-flex flex-wrap">
-                <div class="col-7 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Intensity</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Intensity"></canvas>
+            <div class="container my-3">
+                <div class="row g-3">
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Intensity</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Intensity"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-4 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Country</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Country"></canvas>
+
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Likelihood</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Likelihood"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-4 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Relevance</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Relevance"></canvas>
+            
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Country</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Country"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-7 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Likelihood</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Likelihood"></canvas>
+            
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Relevance</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Relevance"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-7 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Topics</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Topics"></canvas>
+            
+                   
+                    
+            
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Topics</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Topics"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-4 card m-3">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Region</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Region"></canvas>
+            
+                    
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Region</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Region"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-md-9 card m-auto">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Year</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
-                        <div>
-                            <canvas id="Year"></canvas>
+            
+                   
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Year</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">yearly</h6>
+                                <div>
+                                    <canvas id="Year"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
+            
+            
         </div>
     </div>
 {% endblock content %}
